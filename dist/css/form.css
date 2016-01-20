@@ -1,0 +1,68 @@
+.form-fields {
+	width: 50%;
+	border-right: 2px solid #434343;
+	padding-right: 19px;
+}
+
+.form-fields-preview {
+	margin-right: auto;
+}
+
+input {
+  	width: initial;
+	height: initial;
+	margin-top: 20px;
+}
+
+textarea {
+	color: black;
+}
+
+.require-radio {
+	width: 13px;
+	height: 13px;
+}
+
+label {
+	padding-right: 10px;
+}
+
+.panel-body {
+	background-color: #e7e7e7;
+}
+
+.addField {
+	background: #6c9fd5;
+	color: white;
+}
+#logo{
+   float:center;
+}
+#tyLogo{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 217px;
+}
+#tyText{
+    text-align: center;
+    white-space: nowrap;
+}
+#tyDiv{
+    margin: auto;   
+}
+
+.required-error {
+  	display: inline;
+  	color: red;
+  	font-size: smaller;
+}
+
+.span4 input {
+	display: inline;
+	padding-left: 8px;
+}
+
+.span2 {
+	margin-bottom: 0 !important;
+}

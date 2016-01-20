@@ -1,0 +1,313 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+::selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #444;
+}
+
+::-moz-selection {
+ 	color: #fff;
+ 	text-shadow: none;
+ 	background: #444;
+}
+
+
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	background-color: white;
+    position: absolute;
+}
+
+#registerError {
+	width: 100%;
+	margin-top: 10px;
+	text-align: center;
+}
+
+#error_message{
+	color: red;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.navi {
+	background: #2B76A0;
+	height: 40px;
+	width:100%;
+}
+
+#container {
+	background-color: #f7f7f7;
+	width: 357px;
+    height: 570px;
+	position: absolute;
+	padding-top: 10px;
+    margin-right: auto;
+    margin-left: 60%;
+    margin-top: 55px;
+    margin-bottom: 10%;
+	box-shadow: 0 1px 2px 3px rgba(0, 0, 0, .1);
+}
+
+form {
+	margin: 0 auto;
+	margin-top: 20px;
+}
+
+.signupform  {
+	text-align: left;
+	font-size: 14px;
+	padding-bottom: 30px;
+	font-weight: strong;
+}
+
+.formfield {
+	padding: 10px;
+	padding-left: 35px;
+}
+
+.checkboxfield {
+	padding: 5px;
+	padding-top: 10px;
+	padding-left: 35px;
+}
+
+#registerCheck {
+    height: initial;
+    width: initial;
+}
+
+.formSpacing {
+    margin-top: 3px;
+    padding-left: 10px;
+}
+
+
+input[type=number],
+input[type=name],
+input[type=password],
+input[type=email] {
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 12px;
+	width: 290px;
+	height: 35px;
+	border: 1px solid #C7D0D2;
+	border-radius: 2px;
+	box-shadow: inset 0 1.5px 3px rgba(190,190,190,0.4), 0 0 0 5px #F5F7F8;
+}
+#images{
+	margin-left: 3%;
+}
+
+#register-signup-btn {
+	float: left;
+	margin-left: 10px;
+	margin-top: 4px;
+    width: 125px;
+	color: #3D8CC4;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#FFF));
+	background-image: -moz-linear-gradient(top left 90deg, #FFF 0%, #FFF 100%);
+	background-image: linear-gradient(top left 90deg, #FFF 0%, #FFF 100%);
+	border: 1px solid #FFF;
+}
+
+input[type=submit] {
+	float: right;
+	margin-top: 10px;
+    margin-right: 40px;
+	width: 60px;
+	height: 30px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #fff;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3D8CC4), to(#3D8CC4));
+	background-image: -moz-linear-gradient(top left 90deg, #3D8CC4 0%, #3D8CC4 100%);
+	background-image: linear-gradient(top left 90deg, #3D8CC4 0%, #3D8CC4 100%);
+	border-radius: 2px;
+	border: 1px solid #3D8CD5;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#b6e2ff), to(#6ec2e8));
+	background-image: -moz-linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+	background-image: linear-gradient(top left 90deg, #b6e2ff 0%, #6ec2e8 100%);
+}
+
+input[type=submit]:active {
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#3D8CC4), to(#3D8CC4));
+	background-image: -moz-linear-gradient(top left 90deg, #3D8CC4 0%, #3D8CC4 100%);
+	background-image: linear-gradient(top left 90deg, #3D8CC4 0%, #3D8CC4 100%);
+}
+
+.check {
+	margin-left: 3px;
+	clear: right;
+	display: inline;
+	font-size: 11px;
+	color: #444;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.button{
+	border-radius: 5px;
+	border: 2px solid #6495ed;
+	background-color: #5085bb;
+	width: 100px;
+	height: 50px;
+	margin-top: 10px;
+	margin-left: 280px;
+	text-align: center;
+	right: 50px;
+
+}
+
+.button a{
+	text-decoration: none;
+	color: white;
+
+}
+
+h1{
+	text-align: center;
+}
+
+.arrowContainer{
+	align:left;
+}
+
+.image2 {
+ position: absolute;
+ margin-top: 370px;
+}
+
+.logoImage {
+ position: absolute;
+ margin-top: 90px;
+ margin-left: 240px;
+}
+
+.createYourAccount {
+  position: absolute;
+  margin-top: 60px;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  margin-left: 110px;
+}
+
+.description {
+  position: absolute;
+  margin-top: 247px;
+  text-align: center;
+  margin-left: 180px;
+}
+
+.learnMore {
+  position: absolute;
+  text-align: center;
+  margin-left: 52%;
+  margin-top: 53%;
+}
+
+input.ng-pristine + ul#strength {
+    display:none;
+}
+ul#strength {
+    display:inline;
+    list-style:none;
+    margin:0;
+    margin-left:15px;
+    padding:0;
+    vertical-align:2px;
+}
+.point:last {
+    margin:0 !important;
+}
+.point {
+    background:#DDD;
+    border-radius:2px;
+    display:inline-block;
+    height:5px;
+    margin-right:1px;
+    width:20px;
+}
+#footer {
+    position:fixed;
+    bottom:5px;
+}
+
+/* Friendly for mobile */
+@media (max-width: 1000px) {
+	#images {
+		margin-left: 0;
+	}
+
+	.image2 {
+		display: none;
+	}
+
+	.logoImage-mobile {
+		display: block !important;
+		position: relative;
+		margin-left: 90px;
+		margin-top: -40px;
+	}
+
+	.logoImage {
+		display: none;
+	}
+
+	.createYourAccount {
+		position: relative;
+		text-align: center;
+		font-size: 25px;
+		margin-left: 0;
+	}
+
+	.description {
+		display: none;
+	}
+
+	#container {
+		position: relative;
+		margin-top: 20px;
+		height: 640px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+/** Friendly for iPhone 4/5 */
+@media (max-width: 322px) {
+	.logoImage-mobile {
+		margin-left: 70px;
+	}
+
+	.formfield {
+		padding-left: 20px;
+	}
+
+	.checkboxfield {
+		padding-left: 20px;
+	}
+
+	#container {
+		width: 320px;
+	}
+}
+
+/* Hide mobile bluejay logo */
+@media (min-width: 1001px) {
+	.logoImage-mobile {
+		display: none !important;
+	}
+}

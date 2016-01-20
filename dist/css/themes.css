@@ -1,0 +1,32 @@
+.message {
+	color: red;
+	text-align: center;
+	font-style: italic;
+	font-size: 12px;
+}
+
+.selector {
+	color: white;
+}
+
+.themes-image:focus {
+	outline: 3px solid red;
+}
+
+.outline-themes-image {
+	outline: 3px solid red;
+}
+
+.themes-image {
+	background: transparent;
+	padding-left: 0;
+	border: 1px solid white;
+}
+
+#clear-theme-selection:hover {
+	color: #3D8CC4;
+}
+
+#clear-theme-selection:focus {
+	color: #3D8CC4;
+}

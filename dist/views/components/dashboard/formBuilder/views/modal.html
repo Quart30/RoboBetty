@@ -1,0 +1,11 @@
+<div>
+	<div class="modal-header">
+		<h3>{{vm.title}}</h3>
+	</div>
+	<div class="modal-body">
+		<p>{{vm.body}}</p>
+	</div>
+	<div class="modal-footer">
+		<button ng-repeat="btn in vm.btns" ng-click="vm.ok()" ng-class="btn.cssClass">{{btn.label}}</button>
+	</div>
+</div>

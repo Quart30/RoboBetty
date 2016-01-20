@@ -1,0 +1,107 @@
+#page-wrapper:not(.open) ul.sidebar .sidebar-title.separator, .sidebar-footer, ul.sidebar .sidebar-list a:hover, ul.sidebar .sidebar-main a {
+	background:#434343;
+}
+
+#sidebar-wrapper{
+	background-color: #434343;
+	margin-top: 45px;
+}
+
+/* Removing forced scrollbar by rdash */
+html {
+	overflow-y: auto;
+}
+
+
+ul.sidebar li a{
+	color:#f7f7f7;
+}
+
+ul.sidebar .sidebar-title{
+	color:#8b9dc3;
+}
+
+ul.sidebar .sidebar-list a{
+	font-family: "Myriad Pro Regular";
+	color:#f7f7f7;
+}
+
+#themes{
+	margin-left:5em;
+}
+
+/*Adding padding above*/
+.main-content {
+	padding-top: 68px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+
+.main-content .dashboard-title {
+	font-family: "Myriad Pro Semibold";
+	font-size: 30px;
+}
+
+.main-content .dashboard-title-line {
+	background-color: rgb(190, 190, 190);
+	width: 100%;
+	height: 1px;
+	margin-bottom: 20px;
+}
+
+/*Adding Arrows to the page*/
+ul.sidebar .sidebar-list a:hover .menu-icon.enabled {
+	width: 60px;
+}
+
+ul.sidebar .sidebar-list a:hover .menu-icon.disabled {
+	width: 70px;
+}
+
+ul.sidebar .sidebar-list a:hover .arrow-left {
+	float:right;
+	width: 0; 
+	height: 0;
+	margin-top: 10px;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent; 
+	border-right:10px solid rgb(243, 243, 243); 
+}
+
+/* Bottom Profile Page */
+ul.sidebar .sidebar-profile .sidebar-profile-img {
+	width: 50px;
+	height: 100%;
+	position: relative;
+	float: left;
+}
+
+ul.sidebar .sidebar-profile {
+	font-family: "Myriad Pro Regular";
+	font-weight: normal;
+	height: 50px;
+	margin-left:20px;
+	position: absolute;
+	bottom: 69px;
+}
+ul.sidebar .sidebar-profile a {
+	float: left;
+	width: auto;
+	font-size: 15px;
+	color: #b2bfdc;
+	text-indent: 10px;
+}
+
+ul.sidebar .sidebar-profile a .sidebar-profile-title {
+	font-size:17px;
+	height:24px;
+	margin-top: 4px;
+}
+ul.sidebar .sidebar-profile a .sidebar-profile-subtitle {
+	font-size:13px;
+	height:18px;
+}
+ul.sidebar .sidebar-profile a:hover {
+	color: #fff;
+}

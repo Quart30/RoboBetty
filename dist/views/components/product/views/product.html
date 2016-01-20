@@ -1,0 +1,16 @@
+<div ng-controller="ProductController as store">
+<header>
+  <h1 class="text-center">Example products page</h1>
+  <h2 class="text-center">– a products page –</h2>
+</header>
+<div class="list-group">
+  <div class="list-group-item" ng-repeat="product in store.products">
+    <h3>{{product.name}} <em class="pull-right">{{product.price |
+      currency}}</em></h3>
+
+    <product-gallery ng-show="product.images.length"></product-gallery>
+
+    <product-tabs> </product-tabs>
+  </div>
+</div>
+</div>

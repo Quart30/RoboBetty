@@ -1,0 +1,64 @@
+<div ng-controller="EmployeeController">
+	<div id="toaster" style="color:#5cb85c; font-size: 20px; text-align: center">
+		Congratulations, Employee Added!
+	</div>
+	<button type="button" class="btn btn-success" ng-click="openModal()">
+		<i class="glyphicon glyphicon-plus"></i> Add Employee
+	</button>
+	<button type="button" class="btn btn-danger" ng-click="removeMultiple(row)">
+		<i class="glyphicon glyphicon-trash"></i> Remove Employee
+	</button>
+	<br>
+	<br>
+	<div class="col-xs-12 col-md-12 col-lg-12" id="employees-table">
+		<table st-table="displayedCollection" st-safe-src="rowCollection" class="table table-striped">
+			<thead>
+				<tr>
+					<th colspan="5"><input st-search="" class="form-control" placeholder="Search ..." type="text"/></th>
+				</tr>
+				<tr>
+					<th colspan="1"></th>
+					<th colspan="1" st-sort="Name">Name <i st-sort="Name" class="fa fa-sort"></i></th>
+          <th colspan="1" st-sort="PhoneNumber">Phone Number <i st-sort="PhoneNumber" class="fa fa-sort"></i></th>
+          <th colspan="1" st-sort="Email">Email <i st-sort="Email" class="fa fa-sort"></i></th>
+				</tr>
+			</thead>
+			<tbody>
+				<h4 ng-show="!checkIfEmptyTable()"> There are currently {{displayedCollection.length}} employees on this roster and fitting search criteria</h4>
+                <h4 style="color:red" ng-show="checkIfEmptyTable()" class="empty-block">
+                    No employees fitting search criteria found!
+                </h4>					
+				<tr ng-repeat="row in displayedCollection">
+					<td class="center-checkbox">
+						<input class='ngSelectionCheckbox' type='checkbox' ng-checked='row.selected' ng-model='row.selected'>
+					</td>
+					<td style="min-width:10em;max-width:10em;" data-ng-click="editMode = true; editRowCollection(row)">
+						<div class="center" data-ng-hide="editMode"><span >{{row.Name}}</span></div>
+						<input name="name" type="text" class="form-control edit-input" data-ng-show="editMode" data-ng-model="row.Name" ng-pattern="/^[^0-9][A-Za-z,.'-]+\s[A-Za-z,.'-\s]+$/" data-ng-required  style="margin-top:.3em;" required />
+						<p ng-show="!row.Name" class="help-block" style='color:red;'>Enter a valid name.</p>
+					</td>
+					<td class="employee"
+              data-ng-click="editMode = true; editRowCollection(row)">
+						<div class="center" data-ng-hide="editMode">{{row.PhoneNumber}}</div>
+						<input name="number" type="text" ui-mask="(999) 999-9999" class="form-control edit-input" data-ng-show="editMode" data-ng-model="row.PhoneNumber" data-ng-required required  style="margin-top:.3em;"/>
+						<p ng-show="!row.PhoneNumber" class="help-block" style='color:red;'>Enter a valid phone number.</p>
+					</td>
+					<td style="min-width:10em;max-width:10em;" data-ng-click="editMode = true; editRowCollection(row)">
+						<div class="center" data-ng-hide="editMode">{{row.Email}}</div>
+						<input type="email" name="email" class="form-control edit-input" data-ng-show="editMode" data-ng-model="row.Email" ng-pattern="/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/" data-ng-required required  style="margin-top:.3em;"/>
+						<p ng-show="!row.Email" class="help-block" style='color:red;'>Enter a valid email.</p>
+					</td>
+					<td style="min-width:5em;max-width:5em;">
+						<button type="submit" data-ng-show="editMode" data-ng-click="editMode=false; editRowCollection(row);" class="btn col-md-5 btn-primary"  style="margin:.3em .5em 0 0;" ng-disabled="!row.Name || !row.PhoneNumber || !row.Email">
+							<i class="glyphicon glyphicon-ok-circle"></i>
+						</button>
+						<button type="button" data-ng-show="editMode" ng-click="cancel(row); editMode=false;" class="btn col-md-5 btn-default" style="margin-top:.3em;">
+							<i class="glyphicon glyphicon-ban-circle"></i>
+						</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+</div>

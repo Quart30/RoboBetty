@@ -1,0 +1,34 @@
+<div>
+	<div class="modal-header">
+		<h3 class="modal-title" align="center">Add Employee</h3>
+	</div>
+	<div class="modal-body">
+		<form name="modalForm" class="form-horizontal" ng-submit="ok()" novalidate>
+			<div class="form-group" ng-class="{'has-error': modalForm.name.$invalid && !modalForm.name.$pristine }">
+				<label for="modalName" class="col-sm-2 control-label">Name</label>
+				<div class="col-sm-10" style='margin-top:-1.5em;'>
+					<input name="name" type="text" class="form-control" id="modalName" placeholder="Jane Doe" ng-model="modal.Name" ng-pattern="/^[^0-9][A-Za-z,.'-]+\s[A-Za-z,.'-\s]+$/" required>
+					<p ng-show="modalForm.name.$invalid && !modalForm.name.$pristine" class="help-block">Please enter first and last name. Ex: First Last</p>
+				</div>
+			</div>
+			<div class="form-group" ng-class="{'has-error': modalForm.number.$invalid && !modalForm.number.$pristine }">
+				<label for="modalNumber" class="col-sm-2 control-label">Number</label>
+				<div class="col-sm-10" style='margin-top:-1.5em;'>
+					<input type="text" name="number" class="form-control" id="modalNumber" ng-model="modal.PhoneNumber" ng-pattern="/^[0-9]{10}$/"required >
+					<p ng-show="modalForm.number.$invalid && !modalForm.number.$pristine" class="help-block">Please enter a valid phone number Ex: 1234567890</p>
+				</div>
+			</div>
+			<div class="form-group" ng-class="{'has-error': modalForm.email.$invalid && !modalForm.email.$pristine }">
+				<label class="col-sm-2 control-label" for="modalEmail">Email</label>
+				<div class="col-sm-10" style='margin-top:-1.5em;'>
+					<input type="email" required class="form-control" id="modalEmail" placeholder="jane.doe@example.com" ng-model="modal.Email" name="email" required>
+					<p ng-show="modalForm.email.$invalid && !modalForm.email.$pristine" class="help-block">Please enter a valid email Ex: email@address.com</p>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary" ng-disabled="modalForm.$invalid">OK</button>
+				<button class="btn btn-default" ng-click="cancel()">Cancel</button>
+			</div>
+		</form>
+	</div>
+</div>

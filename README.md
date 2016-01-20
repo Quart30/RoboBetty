@@ -4,11 +4,10 @@
 Use https://cse112bluejay.herokuapp.com/ to access last years version of the app. Happy Refactoring!
 
 ### How to install (works best on mac)
-1. `sudo npm install -g gulp bower foreman`
+1. `sudo npm install -g gulp bower foreman` (if windows, make sure you google "git windows", and use git bash for everything.)
 2. make sure you are in the robo_betty_alpha repo dir
 3. `sudo npm install`
 4. If npm install fails, try to remove the `node_modules` dir and `client/bower_components` dir
-
 
 ### You will need a .env file. Ask team leads about this
 The library for the .env file is here: https://github.com/motdotla/dotenv
