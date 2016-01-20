@@ -12,7 +12,9 @@ Use https://cse112bluejay.herokuapp.com/ to access last years version of the app
 ### You will need a .env file. Ask team leads about this
 The library for the .env file is here: https://github.com/motdotla/dotenv
 The env file is a place where you put secret keys that you wouldn't want your client to see, AND you wouldn't want it to be visbile on your public code base. It gets loaded dynamically through a .env file (in the root of your project folder), and this can be like mongodb urls, app port numbers, oauth keys/secrets. the project should work without one (because it sets default values if there is no env specified). 
+
 Any time you see somthing line env.SOME_VARIABLE, you would add a new line in the .env like: SOME_VARIABLE=123VALUE.
+
 1. the .env file will go in the root directory of the app
 2. it will be used to store server configurations
 3. __This .env file should never be pushed to github__
