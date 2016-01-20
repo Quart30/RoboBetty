@@ -1,0 +1,9 @@
+npm install -g ionic
+npm install -g cordova
+npm install -g ios-sim
+
+cd mobile
+ionic add platform ios
+cordova platform add ios
+ionic emulate ios # emulate ios
+ionic serve # see in browser

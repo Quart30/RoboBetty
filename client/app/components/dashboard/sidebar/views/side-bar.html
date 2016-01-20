@@ -1,0 +1,77 @@
+ <div id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+  <div id="sidebar-wrapper">
+    <ul class="sidebar">
+      <li class="sidebar-main">
+        <a ng-click="toggleSidebar()">
+          {{sidebarHeader}}
+          <span class="menu-icon glyphicon glyphicon-transfer"></span>
+        </a>
+      </li>
+      <li ng-repeat="option in options" class="sidebar-list">
+        <a href="#/{{option.link}}">
+          {{option.option}}
+          <span ng-show="toggle" class="arrow-left"></span>
+          <span class="{{option.icon}}" ng-class="{enabled: toggle, disabled: !toggle}"></span>
+        </a>
+      </li>
+      <li class="sidebar-profile">
+        <img class="sidebar-profile-img" src="https://lh3.googleusercontent.com/-tgoExjOkcX0/AAAAAAAAAAI/AAAAAAAAAAA/wEyTqkqK-T8/photo.jpg"></img>
+        <a href="#">
+          <div class="sidebar-profile-title">{{company_name}}</div>
+          <div class="sidebar-profile-subtitle">{{email}}</div>
+        </a> 
+      </li>
+      
+    </ul>
+  </div>
+<!-- </div> -->
+
+
+<!--
+<div id='themes'>
+<div class="row" >
+  <div class ="col-md-4">
+    <button type="submit" style="border: 0; background: transparent">
+      <img class="img-responsive" src="http://image.blingee.com/images17/content/output/000/000/000/64a/553650356_765517.gif?4">
+    </button>
+  </div>
+  <div class ="col-md-4">
+    <button type="submit" style="border: 0; background: transparent">
+      <img class="img-responsive" src="http://www.stuffintheair.com/images/keep-on-spoiling-our-nature-21473378.jpg">
+    </button>
+  </div>
+  <div class ="col-md-4">
+    <button type="submit" style="border: 0; background: transparent">
+      <img class="img-responsive" src="http://fc06.deviantart.net/fs50/i/2009/329/c/8/nature_by_tomatokisses.jpg">
+    </button>  
+  </div>
+</div>
+
+<div class='row'>
+  <div class ="col-md-4">
+    <button type="submit" style="border: 0; background: transparent">
+      <img class="img-responsive" src="http://www.stuffintheair.com/images/keep-on-spoiling-our-nature-21473378.jpg">
+    </button>
+  </div>
+  <div class ="col-md-4">
+    <button type="submit" style="border: 0; background: transparent">
+      <img class="img-responsive" src="http://fc06.deviantart.net/fs50/i/2009/329/c/8/nature_by_tomatokisses.jpg">
+    </button>
+  </div>
+  <div class ="col-md-4">
+    <button type="submit" style="border: 0; background: transparent">
+      <img class="img-responsive" src="http://image.blingee.com/images17/content/output/000/000/000/64a/553650356_765517.gif?4">
+    </button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <button type="button" class="btn btn-block" style='background-color:#434343;color:#fff;'>Cancel</button>
+  </div>
+  <div class="col-md-6">
+    <button type="button" class="btn btn-block" style='background-color:#6c9fd5;color:#fff;'>Save</button>
+  </div>
+</div>
+</div>
+-->

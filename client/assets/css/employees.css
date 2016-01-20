@@ -1,0 +1,67 @@
+.center{ /* format name field */
+    padding-top:.3em;
+}
+
+.center-checkbox{
+  padding-top:.8em;
+}
+
+#employees-table{
+    height:37em;
+    overflow-x: hidden;
+}
+
+.employee{
+    min-width:10em;
+    max-width:10em;
+}
+
+/* format table populated with employee info */
+#employees-table .table-striped > tbody > tr:hover:nth-of-type(odd) {
+  background-color: #E6E6E6;
+  cursor: pointer;
+}
+
+#employees-table .table-striped > tbody > tr:hover:nth-of-type(even) {
+  background-color: #E6E6E6;
+  cursor: pointer;
+}
+
+.edit-input{ /* format edit field */
+  width:14em; 
+}
+
+.fa{
+  cursor:pointer;
+}
+
+.st-sort-ascent i:before {
+    content:  "\f0de";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+.st-sort-descent i:before {
+    content:  "\f0dd";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.modal {
+  text-align: center;
+}
+.modal:before {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  height: 100%;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}

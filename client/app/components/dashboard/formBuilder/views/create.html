@@ -1,0 +1,124 @@
+<blockquote>
+    <p>Select field type you want to add to the form below and click on 'Add Field' button. Then set a placeholder to hint your patient what kind of information to put in.</p>
+</blockquote>
+
+<div class="well">
+    <div class="form-fields" style="display:inline-block;">
+        <div class="form-properties">
+            <h2>Form Edit</h2>
+            <div class="row">
+                <div class="span2">Form Name:</div>
+                <div class="span4"><input type="text" name="form-name" ng-model="form.form_name"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h3>Fields</h3>
+        <div class="add-field">
+            <select ng-model="addField.new" ng-options="type.name as type.value for type in addField.types"></select>
+            <button type="submit" class="btn addField" ng-click="addNewField()"><i class="icon-plus"></i> Add Field</button>
+        </div>
+        <hr>
+        <p ng-show="form.form_fields.length == 0">No fields added yet.</p>
+        <accordion close-others="accordion.oneAtATime">
+            <accordion-group heading="{{field.field_title}}" ng-repeat="field in form.form_fields"> 
+                <accordion-heading>
+                    <span ng-class="{'text-muted': isDisabled}" class="ng-binding" ng-click="showDelete = false">{{field.field_title}}</span>
+                </accordion-heading>
+                <div class="accordion-edit">
+                    <div ng-show="field.field_id != 1">
+                        <button class="btn btn-danger pull-right" type="button" ng-click="showDelete = !showDelete" ng-show="!showDelete"><i class="icon-trash icon-white"></i> Delete</button>
+                        <div class="pull-right" ng-show="showDelete">
+                            <label>Are you sure?</label>
+                            <button class="btn btn-success" type="button" ng-click="deleteField(field.field_id)">Yes</button>
+                            <button class="btn btn-danger" type="button" ng-click="showDelete = !showDelete">No</button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="span2">Field Type:</div>
+                        <div class="span4">{{field.field_type}}</div>
+                    </div>
+
+                    <div class="clear"></div> <hr>
+
+                    <div class="row">
+                        <div class="span2">Field Title:</div>
+                        <div class="span4"><input type="text" ng-model="field.field_title" value="{{field.field_title}}"></div>
+                    </div>
+                    <div class="row">
+                        <div class="span2">Field Placeholder:</div>
+                        <div class="span4"><input type="text" ng-model="field.field_placeholder" placeholder="{{field.field_placeholder}}"></div>
+                    </div>
+                    <div class="row" ng-show="showAddOptions(field)">
+                        <div class="span2">Field Options:</div>
+                        <div class="span6">
+                            <div ng-repeat="option in field.field_options">
+                                <input type="text" ng-model="option.option_title" value="{{option.option_title}}">
+                                <a class="btn btn-danger btn-mini right" type="button" ng-click="deleteOption(field, option)"><i class="icon-minus icon-white"></i></a>
+                                <span class="label label-inverse">Value: {{ option.option_value }}</span>
+                            </div>
+                            <button class="btn btn-primary btn-small" type="button" ng-click="addOption(field)"><i class="icon-plus icon-white"></i> Add Option</button>
+                        </div>
+                    </div>
+
+					<div class="clear"></div> <hr>
+
+                    <div class="row">
+                        <div class="span2">Required:</div>
+                        <div class="span4">
+                            <label>
+                                <input class="require-radio" type="radio" ng-value="true" ng-selected ng-model="field.field_required"/>
+                                Yes
+                            </label>
+                            <label>
+                                <input class="require-radio" type="radio" ng-value="false" ng-model="field.field_required"/>
+                                No
+                            </label>
+                        </div>
+                    </div>
+					
+					<div class="clear"></div> <hr>
+
+					<div class="row">
+						<div class="span2">Disabled:</div>
+                        <div class="span4">
+                            <label>
+                                <input class="require-radio" type="radio" ng-value="true" ng-selected ng-model="field.field_disabled"/>
+                                Yes
+                            </label>
+                            <label>
+                                <input class="require-radio" type="radio" ng-value="false" ng-model="field.field_disabled"/>
+                                No
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </accordion-group>
+        </accordion>
+
+        <p class="text-center">
+            <button class="btn btn-danger pull-left" type="button" ng-click="showReset = !showReset" ng-show="!showReset"><i class="icon-refresh icon-white"></i> Reset</button>
+            <div class="pull-left" ng-show="showReset">
+                <label>Are you sure?</label>
+                <br>
+                <button class="btn btn-success" type="button" ng-click="reset(); showReset = !showReset">Yes</button>
+                <button class="btn btn-danger" type="button" ng-click="showReset = !showReset">No</button>
+            </div>
+        </p>
+
+        <br><hr>
+
+        <div ng-show="showJson">
+            <h4>Form object content:</h4>
+            <pre>{{ form | json }}</pre>
+        </div>
+    </div>
+
+    <div class="form-fields-preview" style="display:inline-block; vertical-align:top; margin-left: 10px" ng-show="previewMode">
+        <h2>Form Preview</h2>
+        <form-directive form="form"></form-directive>
+    </div>
+</div>
+

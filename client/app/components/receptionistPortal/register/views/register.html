@@ -1,0 +1,76 @@
+<head>
+	<link href="css/register.css" rel="stylesheet" />
+	<title>Register an Account</title>
+</head>	
+
+<body ng-app="register">
+	<div ng-controller="RegisterController as regCTRL">
+
+		<div class="navi">
+			<div class="arrowContainer">
+				<div class="arrowbutton">
+					<a href="#/signin"><input id="register-signup-btn" type="submit" Value="Back to Sign In"></a>
+				</div>
+			</div>
+		</div>
+        <div id='images'>
+        <div class="image2">
+           <img src="images/company_sign_in.png">
+        </div>
+        
+        <div class="logoImage">
+           <img src="images/logo.png">
+        </div>
+        
+        <h1 class="createYourAccount"> CREATE YOUR ACCOUNT </h1>
+        
+        <div class="description">
+           <h5> Your office check-in solution </h5>
+           <h6> Create one form, and display it on all of your devices </h6>
+        </div>
+        </div>
+
+		<div id="container" >
+			<!--<h1>Sign Up Form</h1> -->
+			<form ng-submit="reg()" class="signupform">
+		        <div class="logoImage logoImage-mobile">
+		           <img src="images/logo.png">
+		        </div>
+				<div class="formfield">
+                    <b>Company Name</b> <input type="name" class="formSpacing" placeholder="Company Name" ng-model="user.company_name">
+				</div>
+                <div class="formfield">
+					<b>Your current email address</b> <input type="Email" class="formSpacing" placeholder="Email" ng-model="user.email">
+				</div>
+				<div class="formfield">
+					<b>Create a Password</b> </br> <input type="password" class="formSpacing" placeholder="Password" ng-model="user.password">
+                <ul id="strength" check-strength="user.password"></ul>
+				</div>
+
+				<div class="formfield">
+					<b>Confirm your Password</b> <input type="password" class="formSpacing" placeholder="Confirm Password" ng-model="pass">
+				</div>
+        
+                <div class="formfield">
+					<b>Mobile Phone</b> <input type="number" class="formSpacing" placeholder="Phone" ng-model="number" id="numberField">
+				</div>
+            
+                <script>
+                   numfield = document.getElementById("numberField")
+                   numfield.addEventListener("mousewheel", function(evt){ evt.preventDefault(); })
+                </script>
+              
+
+				<div class="checkboxfield">
+					<input type="checkbox" id="registerCheck" ng-model="check">
+					<label class="check" for="checkbox">I agree to the <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></label>
+				</div>
+
+				<div id="registerError">
+					<p id="error_message">{{errorMessage}}</p>
+					<input type="submit" Value="Sign Up">
+				</div>
+			</form>
+		</div>
+  	</div>
+</body>

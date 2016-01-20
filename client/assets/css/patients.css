@@ -1,0 +1,36 @@
+#patient-queue{
+    height:37em;
+    font-size: 14px;
+	overflow-x: hidden;
+}
+
+#patient-queue td{
+	padding:1em;
+	min-width:10em;
+	max-width:10em;
+}
+
+#patient-queue .table-striped > tbody > tr:hover:nth-of-type(odd) {
+  background-color: #E6E6E6;
+  cursor: pointer;
+}
+
+#patient-queue .table-striped > tbody > tr:hover:nth-of-type(even) {
+  background-color: #E6E6E6;
+ 	cursor: pointer;
+}
+
+.st-sort-ascent i:before {
+    content:  "\f0de";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+.st-sort-descent i:before {
+    content:  "\f0dd";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
