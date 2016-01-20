@@ -1,0 +1,12 @@
+<!-- Products gallery -->
+<div>
+  <div class="img-wrap">
+    <img ng-src="{{product.images[galleryCtrl.current]}}"/>
+  </div>
+  <ul class="img-thumbnails clearfix">
+    <li class="small-image pull-left thumbnail"
+        ng-repeat="image in product.images">
+      <img ng-src="{{image}}"/>
+    </li>
+  </ul>
+</div>

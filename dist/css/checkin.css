@@ -1,0 +1,13 @@
+
+#error_message {
+	color: red;
+  text-align: center;
+  font-style: italic;
+  font-size: 12px;
+}
+
+#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

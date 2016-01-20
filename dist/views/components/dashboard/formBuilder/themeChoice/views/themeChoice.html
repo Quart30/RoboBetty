@@ -1,0 +1,9 @@
+<!-- Products gallery -->
+<div ng-app="theme" ng-controller="themeController as theme">
+  <ul class="img-thumbnails clearfix">
+    <li class="small-image pull-left thumbnail"
+        ng-repeat="image in theme.arrayOfUrl">
+      <img ng-src="{{image}}"/>
+    </li>
+  </ul>
+</div>

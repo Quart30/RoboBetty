@@ -1,0 +1,50 @@
+<head>
+  <link href="css/themes.css" rel="stylesheet" >
+  <title>Check In Themes</title>
+</head>
+<div class="nav" ng-controller="ThemesController as themesCTRL">
+  <script>
+      $(document).on('click','.img-responsive', function(evt) {
+        evt.preventDefault();
+
+        //First removes all borders from images
+        $('.img-responsive').removeClass('outline-themes-image');
+        //Adds red border to last clicked on image
+        $('#' + evt.currentTarget.id).addClass('outline-themes-image'); 
+      });
+
+      $(document).on('click', '#clear-theme-selection', function(evt) {
+        evt.preventDefault();
+        //Removes all borders
+        $('.img-responsive').removeClass('outline-themes-image');
+      })
+  </script>
+
+  <div class="container-fluid">
+    
+    <div class="row" ng-repeat="rows in splitData">
+      <div class ="col-md-4" ng-repeat="image in rows">
+        <!-- $parent.index is the row number, $index is the column number -->
+        <input id="themes-image-{{$parent.$index*3+$index}}" class="themes-image img-responsive" type="image" src="{{image}}" ng-click="selectedImage.value = $parent.$index*3+$index"></input>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="message">
+        <p>{{message}}</p>
+      </div>
+    </div>
+
+    <div class="selector">
+      <div class="row">
+        <div class="col-md-6">
+          <input ng-click="submitTheme()" type="submit" class="btn btn-block" style='background-color:#6c9fd5;' value="Save"></input>
+        </div>
+        <div class="col-md-6">
+          <input ng-click="clear()" id="clear-theme-selection" type="button" class="btn btn-block" style='background-color:#434343;' value="Clear"></input>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

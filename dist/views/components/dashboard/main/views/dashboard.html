@@ -1,0 +1,19 @@
+<!-- Adding the NavBar -->
+<nav-bar></nav-bar>
+
+<!-- DashboardController -->
+<div ng-controller='DashboardController'>
+	<div  class="row" id="page-wrapper" ng-class="{'open': toggle}" ng-cloak>
+		<side-bar></side-bar>
+		<section class="content-wrapper">
+			<!-- <aside data-main-menu>aside</aside> -->
+			<div class="main-content">
+				<div class="dashboard-title">
+					{{title || ""}}
+				</div>
+				<div class="dashboard-title-line"></div>
+				<div data-ui-view></div>
+			</div>
+		</section>
+	</div>
+</div>

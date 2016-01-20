@@ -4,6 +4,13 @@
 Use https://cse112bluejay.herokuapp.com/ to access last years version of the app. Happy Refactoring!
 
 # How to install
+
+Daleebz's addition's
+If windows:
+make sure you google: git windows.
+afterwards, use git bash for everything. your life will be easier
+
+
 1. `npm install -g gulp bower foreman`
 2. make sure you are in the robo_betty_alpha repo dir
 3. `npm install`

@@ -1,0 +1,32 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Password Recovery</title>
+	<link rel="stylesheet" href="css/recovery.css">
+</head>
+
+<body ng-app="recovery">
+	<div ng-conroller="RecoveryController">
+		<div class="navi">
+			<div class="arrowContainer">
+				<div class="arrowbutton">
+					<a href="#/signin"><img src="images/back.png" /></a>
+				</div>
+			</div>
+		</div>
+		<div id="container">
+			<form ng-submit="recovery()">
+				<h1>Password Recovery</h1>
+				<p>To recover your password, enter in your email address/login information.</p>
+				<input type="email" placeholder="Email Adreess" ng-model="email">
+
+				<div id="lower">
+					<input type="submit" value="Continue">
+				</div>
+			</form>
+			<div id="recovery">
+				<p id="error_message">{{errMessage}}</p>
+			</div>
+		</div>
+	</div>
+</body>

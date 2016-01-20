@@ -1,0 +1,23 @@
+<h3 style="margin-left: -45px" ng-show = "!form.submitted">{{ form.form_name }}</h3>
+
+<div ng-show="!form.submitted">
+    <form name="myForm" id="myForm">
+        <div ng-repeat="field in form.form_fields">
+            <field-directive field="field">
+
+            </field-directive>
+        </div>
+    </form>
+
+
+    <div class="form-actions" style="margin-top:10px;">
+        <p style="margin-left: -45px" class="text-center">
+            <button class="btn btn-success right" type="button" ng-disabled="myForm.$valid" ng-click="submit()"><i class="icon-edit icon-white"></i> Check In</button>
+        </p>
+    </div>
+</div>
+
+<div ng-show="form.submitted" id="tyDiv">
+    <img src="images/logo.png" id="tyLogo"></img>
+    <h3 id = "tyText">Thank You For Checking In</h3>
+</div>

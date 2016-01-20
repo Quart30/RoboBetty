@@ -1,0 +1,62 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Check In</title>	
+  	<link rel="stylesheet" href="css/patient_mode.css">
+  	<link rel="stylesheet" href="css/form.css">
+  	<link rel="stylesheet" href="css/checkin.css">
+</head>
+<style>
+	.modal-footer {
+		color: red;
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+	}
+
+	.logo {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+</style>
+
+<body ng-app="checkin" style="overflow-x: hidden;">	
+	<div ng-controller="ModalDemoCtrl">
+		<div ng-controller="CheckinController" class="foo" data-ng-init="init()">
+			<div style = "background-image: url({{background_image}}); background-size :100% 100%; width:100%; height:100%; position:fixed;">
+			</div>
+			<div class="form_container">
+				<div class="inner">
+					<div class="inner-field-wrapper">
+						<form id="leonli" ng-submit="submit()">		
+						    <div class="form-fields-preview" >
+						        <patient-form-directive form="form"></patient-form-directive>
+						    </div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id = "settings">
+                <button type="button" id='toDashboard' ng-show="!appConfig.isMobile" ng-click="open()"> Admin Sign In </button>
+				<div id="clock-container"><h1 id="clock">{{clock | date: 'hh:mm:ss a'}}</h1></div>
+			</div>
+	    	<script type="text/ng-template" id="myModalContent.html">
+		    	<div ng-controller="admin_signinCtrl">
+	    			<form ng-submit="checkin()">		
+	        			<div class="modal-body">
+							<img class="logo" src="images/logo.png">
+							<h1>Admin Sign In</h1>
+							<input type="password" ng-model="user.password" placeholder="Password" style="padding-left: 8px">		
+	        			</div>
+	        			<div class="modal-footer">
+	        				<p id="error_message">{{errMessage}}</p>
+	            			<input type="submit" value="Admin Sign In" style="font-style: normal">
+	        			</div>
+	    			</form>
+	    		</div>
+    		</script>
+	    </div>
+	</div>
+</body>
