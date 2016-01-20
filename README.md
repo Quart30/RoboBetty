@@ -9,15 +9,16 @@ Use https://cse112bluejay.herokuapp.com/ to access last years version of the app
 3. `sudo npm install`
 4. If npm install fails, try to remove the `node_modules` dir and `client/bower_components` dir
 
-### You will need a .env file. Ask team leads about this
-The library for the .env file is here: https://github.com/motdotla/dotenv
-The env file is a place where you put secret keys that you wouldn't want your client to see, AND you wouldn't want it to be visbile on your public code base. It gets loaded dynamically through a .env file (in the root of your project folder), and this can be like mongodb urls, app port numbers, oauth keys/secrets. the project should work without one (because it sets default values if there is no env specified). 
+### .env File
+Each developer needs their own .env file, although there are default values that don't make this completely necessary.
 
-Any time you see somthing line env.SOME_VARIABLE, you would add a new line in the .env like: SOME_VARIABLE=123VALUE.
+The library for the .env file stuff is here: https://github.com/motdotla/dotenv
 
-1. the .env file will go in the root directory of the app
-2. it will be used to store server configurations
-3. __This .env file should never be pushed to github__
+The env file goes in the root directory. It's where you put secret keys that you wouldn't want to be visbile on your public code base. Keys/secrets get loaded dynamically through this file, and holds things like mongodb urls, app port numbers, oauth keys. 
+
+tl;dr Any time you see somthing like "env.SOME_VARIABLE", you would add a new line in the .env like "SOME_VARIABLE=123VALUE".
+
+__This .env file should never be pushed to github__
 
 ### How to run frontend portion only
 1. `gulp frontend`
