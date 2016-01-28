@@ -1,5 +1,7 @@
 'use strict';
 
+/* for sean */
+
 /*This module is meant to house the functions
 * used by the authorization (auth) API. The
 * actual API is set up in index.js
