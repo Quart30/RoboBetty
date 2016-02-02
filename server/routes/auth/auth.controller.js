@@ -1,6 +1,6 @@
 'use strict';
 
-/* for sean */
+/* Thanks, got it! */
 
 /*This module is meant to house the functions
 * used by the authorization (auth) API. The
